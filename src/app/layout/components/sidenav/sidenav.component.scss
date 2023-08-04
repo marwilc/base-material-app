@@ -1,0 +1,15 @@
+.drawer {
+    height: calc(100% - 48px);
+    background-color: var(--divider-color);
+}
+
+.sidenav {
+    width: 256px;
+}
+
+.inner-drawer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}

@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+
+    .nav {
+        z-index: 2;
+        background: var(--light-color);
+        width: 100%;
+    }
+}

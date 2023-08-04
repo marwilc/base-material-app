@@ -1,0 +1,17 @@
+<mat-drawer-container class="drawer" autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+        <div class="inner-drawer-container">
+            <div>
+                <app-sidenav-item
+                    *ngFor="let item of sideNavItems"
+                    [sideNavItem]="item"
+                ></app-sidenav-item>
+            </div>
+            <span>version {{ versionApp }}</span>
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>

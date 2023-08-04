@@ -1,0 +1,28 @@
+.item {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: solid var(--divider-color) 1px;
+
+    &:hover {
+        .item-icon {
+            span {
+                color: var(--accent-color);
+            }
+
+            .icon-module {
+                color: var(--accent-color);
+            }
+        }
+    }
+}
+
+.item-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
