@@ -1,10 +1,6 @@
 .drawer {
-    height: calc(100% - 48px);
+    height: calc(100% - 76px);
     background-color: var(--divider-color);
-}
-
-.sidenav {
-    width: 256px;
 }
 
 .inner-drawer-container {
@@ -12,4 +8,22 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+.sidenav-content {
+    height: calc(100% - 2rem);
+    padding: var(--padding-layout);
+    width: calc(100% - 102px);
+}
+
+.sidenav-content-opened {
+    width: calc(100% - 305px);
+}
+
+.expanded {
+    width: 256px;
+}
+
+.close {
+    width: 54px;
 }

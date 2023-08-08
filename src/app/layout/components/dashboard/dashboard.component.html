@@ -1,1 +1,55 @@
-<p>dashboard works!</p>
+<div class="cards-container w-100">
+    <mat-card
+        class="card-item bstn-card"
+        *ngFor="let item of cardItems"
+    >
+        <mat-card-content class="card-content">
+            <div [ngClass]="[item.class, 'bstn-card-icon']">
+                <mat-icon>{{ item.icon }}</mat-icon>
+            </div>
+
+            <div class="label">
+                <span class="h1">{{ item.name }}</span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="cards-container h-100 w-100 mt-16">
+    <mat-card class="card-graphs bstn-card">
+        <mat-card-header class="header-graphs">
+            <mat-card-title>Trainings</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content class="container-graph">
+            <canvas
+                baseChart
+                width="400"
+                height="400"
+                [type]="'line'"
+                [data]="lineChartData"
+                [options]="lineChartOptions"
+                [legend]="lineChartLegend"
+            >
+            </canvas>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card-graphs bstn-card">
+        <mat-card-header class="header-graphs">
+            <mat-card-title>Users</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="container-graph">
+            <canvas
+                baseChart
+                [type]="'pie'"
+                [datasets]="pieChartDatasets"
+                [labels]="pieChartLabels"
+                [options]="pieChartOptions"
+                [plugins]="pieChartPlugins"
+                [legend]="pieChartLegend"
+            >
+            </canvas>
+        </mat-card-content>
+    </mat-card>
+</div>

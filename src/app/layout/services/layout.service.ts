@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LayoutService {
     private _navbarOpen = new BehaviorSubject<boolean>(false);
+
     constructor() {}
 
     setStatusNavbar(value: boolean) {

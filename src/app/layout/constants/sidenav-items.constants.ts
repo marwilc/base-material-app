@@ -1,8 +1,14 @@
+import { RoutingCandidates } from '@core/constants/routing.constants';
 import { SideNavItem } from '..';
 
 export const SIDE_NAV_ITEMS: SideNavItem[] = [
     {
-        path: '/candidates',
+        path: '/',
+        name: 'Home',
+        icon: 'home',
+    },
+    {
+        path: RoutingCandidates.root,
         name: 'Candidates',
         icon: 'people',
     },

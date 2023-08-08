@@ -32,7 +32,9 @@
             "@shared/*": ["./src/app/shared/*"],
             "@env/*": ["./src/environments/*"],
             "@assets/*": ["./src/assets/*"],
-            "@app/*": ["./src/app/*"]
+            "@app/*": ["./src/app/*"],
+            "rxjs": ["node_modules/rxjs"],
+            "rxjs/*": ["node_modules/rxjs/*"]
         }
     },
     "angularCompilerOptions": {

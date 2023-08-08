@@ -49,11 +49,94 @@ $theme: mat.define-light-theme(
     --primary-color: #3f51b5;
     --text-color: #ffffff;
     --accent-color: #448aff;
-    --primary-text-color: #212121;
+    --primary-text-color: #222b45;
     --secondary-text-color: #757575;
     --divider-color: #edf1f7;
     --riple-color: #3f51b51e;
     --background-hover: #3f51b51b;
     --light-color: #fff;
     --icon-colors: #8f9bb3;
+    --border-color: #e4e9f2;
+    --hover-light: #ffffff46;
+
+    --background-gradients-1: linear-gradient(
+        to right,
+        #2ce69b,
+        #00d68f
+    );
+
+    --background-gradients-light-1: linear-gradient(
+        to right,
+        #8cfac7,
+        #00d68f
+    );
+
+    --background-gradients-2: linear-gradient(
+        to right,
+        #598bff,
+        #3366ff
+    );
+
+    --background-gradients-light-2: linear-gradient(
+        to right,
+        #a6c1ff,
+        #3366ff
+    );
+
+    --background-gradients-3: linear-gradient(
+        to right,
+        #42aaff,
+        #0095ff
+    );
+
+    --background-gradients-light-3: linear-gradient(
+        to right,
+        #94cbff,
+        #0095ff
+    );
+
+    --background-gradients-4: linear-gradient(
+        to right,
+        #ffc94d,
+        #ffaa00
+    );
+
+    --background-gradients-light-4: linear-gradient(
+        to right,
+        #ffe59e,
+        #ffaa00
+    );
+
+    --background-gradients-5: linear-gradient(
+        to right,
+        #ff708d,
+        #ff3d71
+    );
+
+    --background-gradients-light-5: linear-gradient(
+        to right,
+        #ffa8b4,
+        #ff3d71
+    );
+
+    --user-medium-name-text-font-size: 0.9375rem;
+    --user-medium-name-text-line-height: 1.25rem;
+    --font-size-h1: 1.375rem;
+    --text-font-weight-400: 400;
+    --text-font-weight-700: 700;
+    --padding-layout: 1.5rem 1.5rem 0.5rem;
+
+    --header-box-shadow: 0 0.5rem 1rem 0 rgba(44, 51, 73, 0.1);
+
+    --card-background-color: var(--light-color);
+    --card-border-width: 0.0625rem;
+    --card-border-style: solid;
+    --card-border-color: var(--border-color);
+    --card-border-radius: 0.25rem;
+    --card-shadow: none;
+    --card-text-color: var(--primary-text-color);
+    --card-text-font-size: var(--user-medium-name-text-font-size);
+    --card-text-font-weight: var(--text-font-weight-400);
+    --card-text-line-height: var(--user-medium-name-text-line-height);
+    --card-margin-bottom: 1.875rem;
 }

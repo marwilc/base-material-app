@@ -13,8 +13,8 @@
                 color: var(--accent-color);
             }
 
-            .icon-module {
-                color: var(--accent-color);
+            .hover-icon {
+                color: var(--accent-color) !important;
             }
         }
     }
@@ -25,4 +25,14 @@
     flex-direction: row;
     gap: 16px;
     align-items: center;
+}
+
+.selected-module {
+    .hover-icon {
+        color: var(--accent-color) !important;
+    }
+
+    span {
+        color: var(--accent-color);
+    }
 }

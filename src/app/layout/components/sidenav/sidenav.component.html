@@ -1,5 +1,10 @@
-<mat-drawer-container class="drawer" autosize>
-    <mat-drawer #drawer class="sidenav" mode="over">
+<mat-drawer-container class="drawer" autosize [hasBackdrop]="false">
+    <mat-drawer
+        #drawer
+        [class]="drawerClass"
+        mode="over"
+        [opened]="true"
+    >
         <div class="inner-drawer-container">
             <div>
                 <app-sidenav-item
@@ -7,11 +12,14 @@
                     [sideNavItem]="item"
                 ></app-sidenav-item>
             </div>
-            <span>version {{ versionApp }}</span>
+            <span *ngIf="sideOpened">version {{ versionApp }}</span>
         </div>
     </mat-drawer>
 
-    <div class="example-sidenav-content">
+    <div
+        class="sidenav-content"
+        [ngClass]="{ 'sidenav-content-opened': sideOpened }"
+    >
         <router-outlet></router-outlet>
     </div>
 </mat-drawer-container>

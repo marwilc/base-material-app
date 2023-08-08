@@ -1,17 +1,25 @@
-<div class="item">
-    <div class="item-icon">
+<div class="item" (click)="onSelectItem()">
+    <div
+        class="item-icon"
+        [ngClass]="{
+            'selected-module': currentModule.includes(
+                sideNavItem.path
+            )
+        }"
+    >
         <mat-icon
             aria-hidden="false"
-            class="icon icon-module"
+            class="icon hover-icon"
             aria-label="Example home icon"
             [fontIcon]="sideNavItem.icon"
         ></mat-icon>
-        <span>{{ sideNavItem.name }}</span>
+        <span *ngIf="opened">{{ sideNavItem.name }}</span>
     </div>
     <mat-icon
+        *ngIf="opened"
         aria-hidden="false"
         aria-label="Example home icon"
         class="icon"
-        fontIcon="chevron_right"
+        fontIcon="chevron_left"
     ></mat-icon>
 </div>

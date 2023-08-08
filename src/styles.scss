@@ -10,5 +10,118 @@ body {
 }
 
 .icon {
-    color: var(--icon-colors);
+    color: var(--icon-colors) !important;
+}
+
+$max: 100;
+
+@for $i from 1 through $max {
+    .mr-#{$i} {
+        margin-right: #{$i}px;
+    }
+
+    .mt-#{$i} {
+        margin-top: #{$i}px;
+    }
+
+    .ml-#{$i} {
+        margin-left: #{$i}px;
+    }
+
+    .w-#{$i} {
+        width: #{$i} + '%';
+    }
+}
+
+.bstn-header {
+    box-shadow: var(--header-box-shadow);
+}
+
+.bstn-card {
+    background-color: var(--card-background-color) !important;
+    border: var(--card-border-width) var(--card-border-style)
+        var(--card-border-color) !important;
+    border-radius: var(--card-border-radius) !important;
+    box-shadow: var(--card-shadow) !important;
+    color: var(--card-text-color) !important;
+    font-size: var(--card-text-font-size) !important;
+    font-weight: var(--card-text-font-weight) !important;
+    line-height: var(--card-text-line-height) !important;
+}
+
+.bstn-card-icon {
+    width: 94px;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 16px;
+
+    & mat-icon {
+        width: 100%;
+        font-size: 56px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: var(--light-color);
+    }
+
+    &.tasks {
+        border-radius: var(--card-border-radius);
+        background: var(--background-gradients-1);
+
+        &:hover {
+            background: var(--background-gradients-light-1);
+        }
+    }
+
+    &.training {
+        border-radius: var(--card-border-radius);
+        background: var(--background-gradients-2);
+
+        &:hover {
+            background: var(--background-gradients-light-2);
+        }
+    }
+
+    &.survey {
+        border-radius: var(--card-border-radius);
+        background: var(--background-gradients-4);
+
+        &:hover {
+            background: var(--background-gradients-light-4);
+        }
+    }
+
+    &.quiz {
+        border-radius: var(--card-border-radius);
+        background: var(--background-gradients-5);
+
+        &:hover {
+            background: var(--background-gradients-light-5);
+        }
+    }
+
+    &.performance {
+        border-radius: var(--card-border-radius);
+        background: var(--background-gradients-3);
+
+        &:hover {
+            background: var(--background-gradients-light-3);
+        }
+    }
+}
+
+.h1 {
+    color: var(--primary-text-color);
+    font-size: var(--font-size-h1);
+    font-weight: var(--text-font-weight-700);
+}
+
+.mat-drawer-content {
+    display: flex !important;
+    width: 100%;
+    justify-content: flex-end;
 }

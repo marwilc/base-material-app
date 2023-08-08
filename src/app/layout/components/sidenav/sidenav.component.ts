@@ -24,6 +24,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
     @ViewChild('drawer') drawer: MatDrawer;
     sideNavItems: SideNavItem[] = SIDE_NAV_ITEMS;
     versionApp: string = packageJson.version;
+    drawerClass: string = 'close';
     private _subs = new Subscription();
 
     constructor(private _layoutService: LayoutService) {}
@@ -33,9 +34,11 @@ export class SidenavComponent implements OnInit, OnDestroy {
             this._layoutService
                 .getStatusNavbar()
                 .subscribe((value: boolean) => {
-                    this.sideOpened = value;
                     if (this.drawer) {
-                        this.drawer.toggle();
+                        this.sideOpened = value;
+                        this.drawerClass = this.sideOpened
+                            ? 'expanded'
+                            : 'close';
                     }
                 })
         );

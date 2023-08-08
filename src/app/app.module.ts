@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry } from '@angular/material/icon';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
     declarations: [AppComponent],
@@ -12,6 +13,7 @@ import { MatIconRegistry } from '@angular/material/icon';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
+        NgChartsModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -1,5 +1,25 @@
-<nav class="nav mat-elevation-z12">
-    <button mat-icon-button (click)="openSide()">
-        <mat-icon class="icon">menu</mat-icon>
-    </button>
+<nav class="nav bstn-header w-100">
+    <div>
+        <button mat-icon-button (click)="openSide()" class="menu">
+            <mat-icon class="icon">menu</mat-icon>
+        </button>
+
+        <a class="logo">{{ title }}</a>
+    </div>
+
+    <div class="avatar-container mr-16" [matMenuTriggerFor]="menu">
+        <app-avatar class="mr-16" [imageUrl]="avatarUrl"></app-avatar>
+        <span class="user-name">{{ userName }}</span>
+    </div>
 </nav>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [disableRipple]="true" class="menu-button">
+        <mat-icon class="icon">person</mat-icon>
+        <span>Profile</span>
+    </button>
+    <button mat-menu-item [disableRipple]="true" class="menu-button">
+        <mat-icon class="icon">logout</mat-icon>
+        <span>Logout</span>
+    </button>
+</mat-menu>

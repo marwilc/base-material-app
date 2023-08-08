@@ -17,6 +17,9 @@ import { Subscription } from 'rxjs';
 export class NavbarComponent implements OnInit, OnDestroy {
     sideOpened: boolean = false;
     private _subs = new Subscription();
+    title: string = 'HSI';
+    userName: string = 'Carl Glenn';
+    avatarUrl: string = 'assets/images/employee-img.png';
 
     constructor(private _layoutService: LayoutService) {}
 
@@ -36,4 +39,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     openSide() {
         this._layoutService.setStatusNavbar(!this.sideOpened);
     }
+
+    onClickProfile() {}
 }
