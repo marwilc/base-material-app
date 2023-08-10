@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CardItem } from '@layout/interfaces/card-item.interface';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
 
 @Component({
@@ -7,7 +8,7 @@ import { ChartConfiguration, ChartOptions } from 'chart.js';
     styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
-    cardItems: any[] = [
+    cardItems: CardItem[] = [
         {
             icon: 'task',
             name: 'Assigned Tasks & Recommendations',
@@ -32,12 +33,6 @@ export class DashboardComponent {
             value: '1',
             class: 'quiz',
         },
-        // {
-        //     icon: 'trending_up',
-        //     name: 'Performance',
-        //     value: '1',
-        //     class: 'performance',
-        // },
     ];
 
     public lineChartData: ChartConfiguration<'line'>['data'] = {

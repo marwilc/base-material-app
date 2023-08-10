@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription, filter } from 'rxjs';
-import { LayoutService } from './layout';
+import { Subscription } from 'rxjs';
 import { RouterService } from './core';
 
 @Component({

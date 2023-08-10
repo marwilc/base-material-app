@@ -1,10 +1,7 @@
 import {
     Component,
-    Input,
-    OnChanges,
     OnDestroy,
     OnInit,
-    SimpleChanges,
     ViewChild,
 } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';

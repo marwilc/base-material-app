@@ -1,10 +1,7 @@
 import {
     Component,
-    EventEmitter,
-    Input,
     OnDestroy,
     OnInit,
-    Output,
 } from '@angular/core';
 import { LayoutService } from '@layout/services';
 import { Subscription } from 'rxjs';
@@ -16,10 +13,11 @@ import { Subscription } from 'rxjs';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
     sideOpened: boolean = false;
-    private _subs = new Subscription();
     title: string = 'HSI';
     userName: string = 'Carl Glenn';
     avatarUrl: string = 'assets/images/employee-img.png';
+    private _subs = new Subscription();
+   
 
     constructor(private _layoutService: LayoutService) {}
 

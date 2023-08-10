@@ -1,14 +1,11 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import {
-    ActivatedRouteSnapshot,
-    NavigationEnd,
     Router,
-    Scroll,
 } from '@angular/router';
 import { RouterService } from '@core/services';
 import { SideNavItem } from '@layout/interfaces';
 import { LayoutService } from '@layout/services';
-import { Subscription, filter, map } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-sidenav-item',
