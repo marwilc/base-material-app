@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconRegistry } from '@angular/material/icon';
-import { NgChartsModule } from 'ng2-charts';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        NgChartsModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
           enabled: !isDevMode(),
           // Register the ServiceWorker as soon as the application is stable

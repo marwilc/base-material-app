@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { AvatarComponent } from './components';
 import { NgChartsModule } from 'ng2-charts';
+import { LayoutModule } from '@angular/cdk/layout';
 
 const MODULES = [
     MatSidenavModule,
@@ -18,6 +19,7 @@ const MODULES = [
     MatMenuModule,
     MatCardModule,
     NgChartsModule,
+    LayoutModule,
 ];
 
 const COMPONENTS = [AvatarComponent];
