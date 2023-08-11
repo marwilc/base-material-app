@@ -1,9 +1,4 @@
-import {
-    Component,
-    OnDestroy,
-    OnInit,
-    ViewChild,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { SIDE_NAV_ITEMS } from '@layout/constants/sidenav-items.constants';
 import { SideNavItem } from '@layout/interfaces';
@@ -22,6 +17,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
     sideNavItems: SideNavItem[] = SIDE_NAV_ITEMS;
     versionApp: string = packageJson.version;
     drawerClass: string = 'close';
+    currentSize: string;
     private _subs = new Subscription();
 
     constructor(private _layoutService: LayoutService) {}
@@ -38,6 +34,12 @@ export class SidenavComponent implements OnInit, OnDestroy {
                             : 'close';
                     }
                 })
+        );
+
+        this._subs.add(
+            this._layoutService.getScreenSize().subscribe((value: string) => {
+                this.currentSize = value;
+            })
         );
     }
 
